@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item"><a href="#">Новости</a></li>
+          <li class="breadcrumb__item"><a href="#">2023</a></li>
+          <li class="breadcrumb__item">Дополнительный спектакль «Евгений Онегин» в Томске</li>
+        </ul>
+      </section>
+
+      <!-- main-block -->
+      <section class="main-block margin-bottom--m60 container">
+        <div class="main-block__inner">
+          <picture class="main-block__img">
+            <source srcset="img/article-mobile.webp" type="image/webp" media="(max-width: 500px)" width="345" height="620">
+            <source srcset="img/article.webp" type="image/webp">
+            <img loading="lazy" src="img/article.jpg" class="image"  alt="img">
+          </picture>
+          <div class="main-block__content main-block__content--bottom">
+            <span class="main-block__descr">5 Июн 2022</span>
+            <h1 class="main-block__title">Дополнительный спектакль «Евгений Онегин» в Томске</h1>
+          </div>
+        </div>
+      </section>
+      <!--End main-block -->
+
+      <article class="container article margin-bottom--m60">
+
+        <div class="content-page content-page--article">
+          <div>
+            <p>
+              Друзья, в городе Томск 15 марта состоятся 2 показа спектакля «Евгений Онегин» по произведению Александра Сергеевича Пушкина с участием выдающихся московских актеров..
+            </p>
+          </div>
+
+          <div>
+            <p>
+              Билеты на спектакль в 16:00.
+            </p>
+
+            <a href="https://trigrupp.ru/artist/2023/march/evgeniy-onegin-tomsk1/">https://trigrupp.ru/artist/2023/march/evgeniy-onegin-tomsk1/</a>
+          </div>
+
+          <div>
+            <h3>
+              Доступна оплата Пушкинской картой.
+            </h3>
+          </div>
+
+          <h2>Актерский состав</h2>
+
+          <div>
+            <p>Макар Запорожский, Мария Кононова, Сергей Пиоро создали гармоничный ансамбль и блестяще воплотили в жизнь бессмертное творение великого Александра Пушкина.</p>
+          </div>
+
+          <div>
+            <p>Приглашаем всех жителей Томска, а особенно юное поколение учащихся школ приглашаем посетить спектакль «Евгений Онегин» и ознакомиться с образцом нетленной классики в интересном и непринужденном формате.
+            </p>
+              <p>
+                Спектакль «Евгений Онегин» – это спектакль, который подарит молодым людям незабываемые впечатления и пополнит их интеллектуальный багаж ценными знаниями.
+              </p>
+          </div>
+
+
+        </div>
+
+        <div class="article__social social">
+          <span class="social__descr">Поделиться</span>
+          <ul class="list-reset social__inner">
+
+            <li class="social__item">
+              <a target="_blank" href="https://vk.com/" class="social__link social__link--black">
+                <svg class="social__icon social__icon--white">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a target="_blank" href="https://telegram.org/" class="social__link social__link--black">
+                <svg class="social__icon social__icon--white">
+                  <use xlink:href="img/sprite.svg#tg"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a target="_blank" href="https://ok.ru/" class="social__link social__link--black">
+                <svg class="social__icon social__icon--white">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- concerts-cards -->
+      <section class="concerts-cards container">
+        <h2 class="title-h2">Другие новости</h2>
+
+        <ul class=" grid-col3 list-reset">
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile1.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc1.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc1.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Нервы в Анапе и Сочи</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile2.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc2.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc2.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Концерты группы КняZz в Сибири</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile3.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc3.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc3.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос выступлений Натальи Красновой</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </main>
+
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

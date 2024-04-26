@@ -1,0 +1,143 @@
+.about-section {
+  &__items {
+    display: flex;
+    gap: 20px;
+    @include max768 {
+      display: block;
+    }
+
+    @media screen and (min-width: 767px) {
+      &--row-revers {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__item {
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 40px 20px 40px 40px;
+    background: var(--ui-white);
+    flex: 1 1 500px;
+
+    @include max1366 {
+      padding: 20px;
+    }
+
+    @include max400 {
+      height: 300px;
+    }
+  }
+
+  &__img {
+    flex: 0 1 705px;
+    max-height: 468px;
+
+    &--big{
+      max-height: 507px;
+    }
+    picture {
+      display: flex;
+      align-items: flex-start;
+      overflow: hidden;
+      border-radius: 12px;
+      height: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        min-height: 460px;
+
+        @include max400 {
+          min-height: 0px;
+        }
+      }
+    }
+
+    @include max1366 {
+      flex: 0 1 700px;
+    }
+
+    @include max768 {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    display: none;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include max400 {
+      display: block;
+    }
+  }
+
+  &__content {
+    overflow: auto;
+    max-height: 388px;
+    height: 100%;
+    position: relative;
+
+    &--big-section{
+      max-height: 428px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 100%;
+      width: 4px;
+      border-radius: 12px;
+      background: #e7e7e7;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--ui-dark);
+      border-radius: 12px;
+    }
+
+    @include max1366 {
+      max-height: 420px;
+    }
+
+    @include max400 {
+      max-height: 260px;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+
+    @include max400 {
+      font-size: 14px;
+    }
+
+    color: var(--typography-black);
+    p {
+      margin-top: 0;
+      padding-right: 20px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include max400 {
+      display: -webkit-box;
+      -webkit-line-clamp: 9;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      &.active {
+        -webkit-line-clamp: 1000;
+      }
+    }
+  }
+}

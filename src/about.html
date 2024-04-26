@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item">О нас</li>
+        </ul>
+      </section>
+
+      <section class="container about-section margin-bottom">
+        <div class="title-h2">О нас</div>
+
+        <ul class="list-reset about-section__items about-section__items--row-revers">
+          <li class="about-section__img about-section__img--big">
+            <picture>
+              <source srcset="img/about-bloc-mobile.webp" type="image/webp" media="(max-width: 600px)" width="345" height="300">
+              <source srcset="img/about-block.webp" type="image/webp" width="700" height="488">
+              <img loading="lazy" src="img/about-block.jpg" class="image" width="700" height="488"  alt="img">
+            </picture>
+          </li>
+
+          <li class="about-section__item">
+            <div class="about-section__content about-section__content--big-section text-js-mobile-hidden">
+
+              <div class="about-section__text js-block">
+                <div class="about-section__title title-h3">Тригрупп - это команда профессионалов </div>
+
+                <p>
+                  История концертного агентства «ТриГрупп» берёт свое начало в 2006 году. Именно тогда трое барнаульцев организовали свое первое региональное мероприятие, после которого сразу последовали концерты звезд: Кирпичи, Дельфин, Pain…
+                </p>
+                <p>
+                  Спустя 13 лет этот список значительно увеличился, а команда расширилась. Сегодня «ТриГрупп», это более 100 мероприятий в год по всей необъятной родине, десятки тысяч довольных зрителей, сотни российских и зарубежных звёзд, сотрудничество с которыми уже не первый год говорит о высоком профессионализме и, соответственно, доверии со стороны артиста.
+                </p>
+                <p>
+                  За свою многолетнюю историю «ТриГрупп» довелось организовать и провести концерты таких артистов, как Roxette, Pain, Sepultura, ДДТ, Алиса, Король и Шут, Баста, Ария, Кипелов, Noize MC, Звери, Lumen, Макс Корж, Little Big, Чайф, Любэ, 25/17, Чиж & Co, Мельница, Вадим Самойлов, ПилОт, Нервы и это далеко не полный список.
+                </p>
+                <p>
+                  С каждым годом мы растем профессионально и территориально, охватывая всё новые и новые города с масштабными турами любимых вами артистов и стараемся делать так, чтобы поход на концерт был максимально удобным для вас и приносил только положительные эмоции. Всё это благодаря слаженной работе команды профессионалов, людей, которые любят своё дело и всегда готовы прийти на помощь.
+                </p>
+              </div>
+
+              <button class="about-section__button js-button btn btn-reset btn--grey">Читать далее</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="container margin-bottom">
+        <div class="title-h2">Фото и видео с гастролей</div>
+        @include('partials/legendary-slider.html')
+      </section>
+
+      <section class="poster-slider container">
+        <div class="title-h2">
+          <div class="title-h2__block">
+            <div class="title-h2__text title-h2__text--mr-null">Наша команда</div>
+          </div>
+        </div>
+
+        <div class="slider-container">
+          <div class="swiper slider">
+            <div class="swiper-wrapper slider__wrapper">
+                <div class="swiper-slide slider__slide anime-block-hover">
+                  <a href="img/about-slider1.jpg"  data-fslightbox="gallery-3">
+                    <picture class="slider__img animate-img">
+                      <source srcset="img/about-slider1.webp" type="image/webp">
+                      <img loading="lazy"  src="img/about-slider1.jpg"  width="342" height="400" alt="img">
+                    </picture>
+                  </a>
+                  <div class="slider__content">
+                    <span class="slider__name">Дмитрий Акатьев</span>
+                    <span class="slider__profession">SMM, видеоконтент, турменеджер</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider__slide anime-block-hover">
+                  <a href="img/about-slider2.jpg"  data-fslightbox="gallery-3">
+                    <picture class="slider__img animate-img">
+                      <source srcset="img/about-slider2.webp" type="image/webp">
+                      <img loading="lazy"  src="img/about-slider2.jpg"  width="342" height="400" alt="img">
+                    </picture>
+                  </a>
+                  <div class="slider__content">
+                    <span class="slider__name">Дмитрий Акатьев</span>
+                    <span class="slider__profession">SMM, видеоконтент, турменеджер</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider__slide anime-block-hover">
+                  <a href="img/about-slider3.jpg"   data-fslightbox="gallery-3">
+                    <picture class="slider__img animate-img">
+                      <source srcset="img/about-slider3.webp" type="image/webp">
+                      <img loading="lazy"  src="img/about-slider3.jpg"  width="342" height="400" alt="img">
+                    </picture>
+                  </a>
+                  <div class="slider__content">
+                    <span class="slider__name">Дмитрий Акатьев</span>
+                    <span class="slider__profession">SMM, видеоконтент, турменеджер</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider__slide anime-block-hover">
+                  <a href="img/about-slider4.jpg"  data-fslightbox="gallery-3">
+                    <picture class="slider__img animate-img">
+                      <source srcset="img/about-slider4.webp" type="image/webp">
+                      <img loading="lazy"  src="img/about-slider4.jpg"  width="342" height="400" alt="img">
+                    </picture>
+                  </a>
+                  <div class="slider__content">
+                    <span class="slider__name">Дмитрий Акатьев</span>
+                    <span class="slider__profession">SMM, видеоконтент, турменеджер</span>
+                  </div>
+                </div>
+
+                <div class="swiper-slide slider__slide anime-block-hover">
+                  <a href="img/about-slider1.jpg"  data-fslightbox="gallery-3">
+                    <picture class="slider__img animate-img">
+                      <source srcset="img/about-slider1.webp" type="image/webp">
+                      <img loading="lazy"  src="img/about-slider1.jpg"  width="342" height="400" alt="img">
+                    </picture>
+                  </a>
+                  <div class="slider__content">
+                    <span class="slider__name">Дмитрий Акатьев</span>
+                    <span class="slider__profession">SMM, видеоконтент, турменеджер</span>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+
+          <div class="slider__navigation">
+            <div class="swiper-button-prev slider-arrow"><svg><use xlink:href="img/sprite.svg#arrow-left"></use></svg></div>
+            <div class="swiper-button-next slider-arrow"><svg><use xlink:href="img/sprite.svg#arrow-right"></use></svg></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

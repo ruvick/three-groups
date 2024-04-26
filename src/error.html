@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="error">
+        <div class="container">
+          <div class="error__inner">
+            <div class="error__animate animate">
+              <div class="animate__inner">
+                <ul class="list-reset animate__items">
+                  <li class="animate__item">4</li>
+                  <li class="animate__item">0</li>
+                  <li class="animate__item">4</li>
+                </ul>
+                <div class="animate__images">
+                  <div class="animate__image">
+                    <picture>
+                      <source srcset="img/mic-mobile.png" type="image/webp" media="(max-width: 600px)" width="81" height="308">
+                      <source srcset="img/mic.png" type="image/webp">
+                      <img loading="lazy" src="img/mic.png" class="image" width="790" height="498" alt="img">
+                    </picture>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="error__text">Страница не найдена. Пожалуйста, перейдите на главную.</div>
+            <div class="error__buttons">
+              <a href="main.html" class="error__link btn btn--yellow">На главную</a>
+              <div class="error__button btn btn--white go-back">Назад</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

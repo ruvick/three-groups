@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+
+	<div class="site-container">
+		@include('partials/header.html')
+
+		<main class="main">
+
+			<!-- <a href="#" id="backToTop" class="btn btn--yellow btn--fixed">Купить билет</a> -->
+
+			<section class="breadcrumb container">
+				<ul class="list-reset breadcrumb__items">
+					<li class="breadcrumb__item"><a href="/">Главная</a></li>
+					<li class="breadcrumb__item"><a href="#">Все концерты</a></li>
+					<li class="breadcrumb__item"><a href="#">2023</a></li>
+					<li class="breadcrumb__item"><a href="#">Июнь</a></li>
+					<li class="breadcrumb__item">Мельница</li>
+				</ul>
+			</section>
+
+			<section class="main-block margin-bottom container">
+				<div class="main-block__inner">
+					<!-- По дизайну должна быть картинка или видео, в данный момент картинка и контент закоментированны, и выводится только видео такие блоки будут еще артисты внутренняя и концерт, но там закоментирую видео -->
+					<!--<div class="video-block">
+            <button class="btn-reset video-block__play" aria-label="Play video">
+              <svg>
+                <use xlink:href="img/sprite.svg#play"></use>
+              </svg>
+            </button>
+            <video class="video-block__content" src="about-video.mp4" muted loop preload="metadata"></video>
+          </div>-->
+					<picture class="main-block__img">
+						<source srcset="img/main-block-mobi.webp" type="image/webp" media="(max-width: 500px)" width="345"
+							height="620">
+						<source srcset="img/main-block-pc.webp" type="image/webp" media="(max-width: 1024px)" width="1430"
+							height="718">
+						<img loading="lazy" src="img/main-block-pc.jpg" class="image" width="1430" height="718" alt="img">
+					</picture>
+
+					<div class="main-block__content">
+						<h1 class="main-block__title">Мельница</h1>
+
+						<ul class="list-reset main-block__items">
+							<li class="main-block__item">
+								<span class="main-block__description">Ульяновск</span>
+								<span class="main-block__info">ДК Губернаторский</span>
+							</li>
+							<li class="main-block__item">
+								<span class="main-block__description">5 июн</span>
+								<span class="main-block__info">19:00</span>
+							</li>
+						</ul>
+
+						<div class="main-block__btn">
+							<button class="main-block__button btn-reset btn--yellow btn btn--big2">Купить билет <span>от 2 000
+									руб</span></button>
+							<button class="main-block__button btn-reset btn--white btn btn--big2">Купить Meet & Greet</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="choice-location margin-bottom container">
+				<h2 class="title-h2">Выберите места</h2>
+
+				<div class="choice-location__iframe">
+					<iframe src="https://iframeab-pre8792.intickets.ru/seance/14300945/" width="100%" height="750"
+						frameborder="0"></iframe>
+				</div>
+			</section>
+
+			<!-- content-block -->
+
+			<section class="content-block content-block--mb container">
+				<div class="title-h2">О концерте</div>
+				<ul class="content-block__items list-reset">
+					<li class="content-block__item">
+						<p>
+							Наше концертное агентство поставило задачу организовать и провести концерт рок-группы, который
+							будет незабываемым для зрителей и успешным для всех сторон. Мы внимательно выбирали подходящую
+							площадку, обеспечили высококачественное акустическое и световое оборудование, создали
+							привлекательное оформление сцены. Наша команда провела маркетинг исследования и рекламу концерта,
+							чтобы привлечь максимальное количество поклонников рок-музыки.
+						</p>
+						<picture class="content-block__img">
+							<source srcset="img/content-block-mobi1.webp" type="image/webp" media="(max-width: 500px)"
+								width="685" height="583">
+							<source srcset="img/content-block-pc1.webp" type="image/webp" media="(max-width: 1024px)"
+								width="685" height="654">
+							<img loading="lazy" src="img/content-block-pc1.jpg" class="image" alt="img">
+						</picture>
+					</li>
+
+					<li class="content-block__item">
+
+						<picture class="content-block__img">
+							<source srcset="img/content-block-mobi2.webp" type="image/webp" media="(max-width: 500px)"
+								width="685" height="583">
+							<source srcset="img/content-block-pc2.webp" type="image/webp" media="(max-width: 1024px)"
+								width="685" height="654">
+							<img loading="lazy" src="img/content-block-pc2.jpg" class="image" alt="img">
+						</picture>
+
+						<p>
+							Мы работали с музыкантами и их менеджментом, гарантируя все необходимые условия для успешного
+							выступления. Результатом нашей работы стали полный зал, энергичная атмосфера, восторженные реакции
+							зрителей и положительные отзывы. Мы создли незабываемый опыт для поклонников рок-музыки, позволяя
+							им испытать настоящую эмоциональную связь с музыкой и исполнителями.
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<!-- End content-block -->
+
+			<section class="container margin-bottom">
+				<div class="title-h2">Фото и видео с гастролей</div>
+				@include('partials/legendary-slider.html')
+			</section>
+
+			<section class="container track margin-bottom">
+				<div class="title-h2">Популярные треки</div>
+				@include('partials/track.html')
+			</section>
+
+			<section class="map map--height-big margin-bottom container">
+				<div class="map__inner map__inner--mb map__inner--padding-top">
+					<ul class="map__header list-reset">
+						<li class="map__name">Ульяновск, <span>ДК Губернаторский</span></li>
+						<li class="map__link">
+							<a href="#" target="_blank" class="map__btn btn btn--border-yellow location-btn">
+								<svg class="location-btn__icon">
+									<use xlink:href="img/sprite.svg#geo-location"></use>
+								</svg>
+								Подробнее
+							</a>
+						</li>
+					</ul>
+
+					<div class="map__widget">
+						<div style="position:relative;overflow:hidden;"><a
+								href="https://yandex.ru/maps/org/dvorets_gubernatorskiy/1039426078/?utm_medium=mapframe&utm_source=maps"
+								style="color:#eee;font-size:12px;position:absolute;top:0px;">Дворец Губернаторский</a><a
+								href="https://yandex.ru/maps/195/ulyanovsk/category/concert_hall/184105902/?utm_medium=mapframe&utm_source=maps"
+								style="color:#eee;font-size:12px;position:absolute;top:14px;">Концертный зал в Ульяновске</a><a
+								href="https://yandex.ru/maps/195/ulyanovsk/category/artistic_group/184105908/?utm_medium=mapframe&utm_source=maps"
+								style="color:#eee;font-size:12px;position:absolute;top:28px;">Творческий коллектив в
+								Ульяновске</a><iframe
+								src="https://yandex.ru/map-widget/v1/org/dvorets_gubernatorskiy/1039426078/?ll=48.400594%2C54.317315&z=16.4"
+								width="100%" height="620" frameborder="1" allowfullscreen="true"
+								style="position:relative;"></iframe></div>
+					</div>
+
+				</div>
+
+				<button class="concerts-cards__button btn btn--yellow btn--big">Купить билет <span class="btn--text-grey">от
+						2 000 руб</span></button>
+			</section>
+
+			<section class="poster-slider container">
+				<div class="title-h2">
+					<div class="title-h2__block">
+						<div class="title-h2__text title-h2__text--mr-null">Ближайшие концерты в</div>
+						<form class="select-block main-select main-select--transpanrent-header">
+							<select name="Пол" class="main-select__items multi-default multi-default--text"
+								aria-label="Выбор города">
+								<option value="">Курске</option>
+								<option value="Тольятти">Тольятти</option>
+								<option value="Омск">Омск</option>
+								<option value="Железногорск">Железногорск</option>
+								<option value="Ульяновск">Ульяновск</option>
+								<option value="Краснодар">Краснодар</option>
+								<option value="Омск">Омск</option>
+								<option value="Ульяновск">Ульяновск</option>
+								<option value="Краснодар">Краснодар</option>
+								<option value="Краснодар">Краснодар</option>
+								<option value="Краснодар">Краснодар</option>
+							</select>
+						</form>
+					</div>
+				</div>
+
+				@include('partials/poster-slider.html')
+			</section>
+
+		</main>
+
+
+		@include('partials/footer.html')
+	</div>
+</body>
+
+</html>

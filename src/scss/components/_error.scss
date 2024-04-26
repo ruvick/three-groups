@@ -1,0 +1,161 @@
+.error {
+
+  &__inner {
+    position: relative;
+    @include max600 {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__animate {
+    margin-bottom: 20px;
+
+    @include max600 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    @include max600 {
+      font-size: 14px;
+      max-width: 320px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__buttons {
+    max-width: 460px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    @include max600 {
+      max-width: 300px;
+      flex-direction: column;
+      gap: 10px;
+
+      .btn{
+        min-width: 230px;
+      }
+    }
+  }
+
+  &__link {
+    width: calc(50% - 10px);
+  }
+
+  &__button {
+    width: calc(50% - 10px);
+  }
+}
+
+.animate {
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+
+    @include max1024 {
+      padding-top: 60px;
+    }
+
+    @include max600 {
+      padding-top: 115px;
+    }
+  }
+
+  &__item {
+    color: var(--ui-dark, #2C2F31);
+    font-family: Inter;
+    font-size: 385px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105.023%; /* 404.338px */
+    text-transform: uppercase;
+
+    @include max1024 {
+      font-size: 280px;
+    }
+
+    @include max600 {
+      font-size: 168.133px;
+    }
+  }
+
+  &__images {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translate(-50%, 0);
+
+    @include max600 {
+      top: -25px;
+    }
+  }
+
+  &__image {
+    width: 300px;
+    height: 500px;
+    -webkit-animation-name: rotate;
+    animation-delay: 3s;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-animation-timing-function: linear;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include max1024 {
+      width: 240px;
+      height: 340px;
+    }
+
+    @include max600 {
+      height: 300px;
+      position: relative;
+    }
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(7deg);
+  }
+  75% {
+    -webkit-transform: rotate(-7deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.hidden-button{
+  display:none;
+}

@@ -1,0 +1,42 @@
+<!-- main-block -->
+<section class="main-block main-block--mb container">
+  <div class="main-block__inner">
+
+    <!-- По дизайну должна быть картинка или видео, в данный момент картинка и контент закоментированны, и выводится только видео такие блоки будут еще артисты внутренняя и концерт, но там закоментирую видео -->
+    <div class="video-block">
+      <button class="btn-reset video-block__play" aria-label="Play video">
+        <svg>
+          <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+      <video class="video-block__content" src="about-video.mp4" muted loop preload="metadata"></video>
+    </div>
+
+    <!--<picture class="main-block__img">
+      <source srcset="img/main-block-mobi.webp" type="image/webp" media="(max-width: 500px)" width="345" height="620">
+      <source srcset="img/main-block-pc.webp" type="image/webp" media="(max-width: 1024px)" width="1430" height="718">
+      <img loading="lazy" src="img/main-block-pc.jpg" class="image"  width="1430" height="718" alt="main-block-img">
+    </picture>-->
+
+    <div class="main-block__content">
+      <h1 class="main-block__title">Мельница</h1>
+      <ul class="list-reset main-block__items">
+        <li class="main-block__item">
+          <span class="main-block__description">Ульяновск</span>
+          <span class="main-block__info">ДК Губернаторский</span>
+        </li>
+        <li class="main-block__item">
+          <span class="main-block__description">5 июн</span>
+          <span class="main-block__info">19:00</span>
+        </li>
+        <li class="main-block__item">
+          <span class="main-block__description">1200</span>
+          <span class="main-block__info">Человек собрано</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+<!--End main-block -->
+

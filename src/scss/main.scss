@@ -1,0 +1,43 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/general";
+
+@import "./components/main";
+@import "./components/working";
+@import "./components/search";
+@import "./components/start-page";
+@import "./components/header";
+@import "./components/show-more-menu";
+@import "./components/footer";
+@import "./components/content-page";
+//@import "./components/bread-crumbs";
+@import "./components/banner-block";
+@import "./components/accordion";
+@import "./components/card";
+@import "./components/actions";
+@import "./components/banner";
+@import "./components/error";
+@import "./components/social-section";
+@import "./components/breadcrumb";
+@import "./components/select";
+@import "./components/calendar";
+@import "./components/main-block";
+@import "./components/order-tickets";
+@import "./components/track";
+@import "./components/about-section";
+@import "./components/map";
+@import "./components/contacts";
+@import "./components/video-block";
+@import "./components/modal";
+
+
+
+
+
+
+

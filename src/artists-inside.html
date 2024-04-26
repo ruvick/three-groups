@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+	<div class="site-container">
+		@include('partials/header.html')
+
+		<main class="main">
+			<section class="breadcrumb container">
+				<ul class="list-reset breadcrumb__items">
+					<li class="breadcrumb__item"><a href="/">Главная</a></li>
+					<li class="breadcrumb__item"><a href="#">Все концерты</a></li>
+					<li class="breadcrumb__item">Мельница</li>
+				</ul>
+			</section>
+
+			<section class="main-block margin-bottom container">
+				<div class="main-block__inner">
+
+					<!-- По дизайну должна быть картинка или видео, в данный момент картинка и контент закоментированны, и выводится только видео такие блоки будут еще артисты внутренняя и концерт, но там закоментирую видео -->
+					<!--<div class="video-block">
+            <button class="btn-reset video-block__play" aria-label="Play video">
+              <svg>
+                <use xlink:href="img/sprite.svg#play"></use>
+              </svg>
+            </button>
+            <video class="video-block__content" src="about-video.mp4" muted loop preload="metadata"></video>
+          </div>-->
+
+
+					<picture class="main-block__img">
+						<source srcset="img/main-block-mobi.webp" type="image/webp" media="(max-width: 500px)" width="345"
+							height="620">
+						<source srcset="img/main-block-pc.webp" type="image/webp" media="(max-width: 1024px)" width="1430"
+							height="718">
+						<img loading="lazy" src="img/main-block-pc.jpg" class="image" width="1430" height="718" alt="img">
+					</picture>
+
+					<div class="main-block__content">
+						<h1 class="main-block__title">концерты <br> Мельница</h1>
+
+						<div class="main-block__btn">
+							<button class="main-block__button btn-reset btn--yellow btn btn--big2">Выбрать билеты</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="order-tickets margin-bottom container">
+				<div class="title-h2">График концертов</div>
+				@include('partials/order-tickets.html')
+			</section>
+
+			<section class="container track margin-bottom">
+				<div class="title-h2">Популярные треки</div>
+
+				@include('partials/track.html')
+			</section>
+
+			<section class="container about-section margin-bottom">
+				<div class="title-h2">О группе</div>
+
+				<ul class="list-reset about-section__items">
+					<li class="about-section__img">
+						<picture>
+							<source srcset="img/about-section-mobi.webp" type="image/webp" media="(max-width: 600px)"
+								width="345" height="300">
+							<source srcset="img/about-section.webp" type="image/webp" media="(max-width: 1024px)" width="700"
+								height="488">
+							<img loading="lazy" src="img/about-section.jpg" class="image" alt="img">
+						</picture>
+					</li>
+					<li class="about-section__item">
+						<div class="about-section__content text-js-mobile-hidden">
+							<div class="about-section__text js-block">
+								<div class="about-section__title title-h3">Группа Мельница</div>
+								<p>
+									Была создана 15 октября 1999 года. За 10 лет своего существования она успела несколько раз
+									поменять состав, выпустить шесть полноценных альбомов и переиграть практически во всех клубах
+									Москвы. Без лишней скромности стоит сказать, что «Мельница» - проект уникальный на все
+									времена. Аналогов им не сыщешь даже в странах Скандинавии, а о России вообще не стоит
+									говорить.
+								</p>
+								<p>
+									Основной упор музыкантов – всегда живое, акустическое звучание. В группе играет девять
+									человек, каждый со своим неповторимым инструментом. Что же до стиля, то тут вопрос остается
+									спорным. Видимо участники проекта настолько широко осведомлены в вопросах стиля, что горазды
+									совмещать практически все музыкальные направления в одно. Но в основном музыка «Мельницы» -
+									квинтэссенция кельтского, скандинавского и русского фолка, готики, рока и классики.
+								</p>
+								<p>
+									Слова, положенные на музыку повествуют нам о главных вопросах человечества: жизни и смерти,
+									любви и красоте, счастье и горе. Изюминкой «Мельницы» является то, что их слова звучать в
+									сказочном антураже.
+								</p>
+							</div>
+
+							<button class="about-section__button js-button btn btn-reset btn--grey">Читать далее</button>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+
+			<section class="container ">
+				<div class="title-h2">Фото и видео с гастролей</div>
+				@include('partials/legendary-slider.html')
+			</section>
+
+
+		</main>
+
+
+		@include('partials/footer.html')
+	</div>
+</body>
+
+</html>

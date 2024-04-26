@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item">Контакты</li>
+        </ul>
+      </section>
+
+      <section class="map container">
+        <h2 class="title-h2">Контакты</h2>
+
+        <div class="map__block">
+          <ul class="contacts list-reset">
+            <li class="contacts__item">
+              <span class="contacts__name">Адрес</span>
+              <span class="contacts__description"><span>г. Барнаул</span> пл. Баварина, 1, оф. 405</span>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__name">Телефон</span>
+              <div class="contacts__description"><a class="contacts__link" href="tel:+79646033023">+7 (964) 603-30-23</a> <a class="contacts__link" href="tel:+73852533023">+7 (3852) 53–30–23</a></div>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__name">Электронная почта</span>
+              <div class="contacts__description"><a class="contacts__link" href="mailto:info@trigrupp.ru">info@trigrupp.ru</a></div>
+            </li>
+            <li class="contacts__item">
+              <span class="contacts__name">Соцсети</span>
+              <div class="contacts__social social">
+                <ul class="list-reset social__inner">
+
+                  <li class="social__item">
+                    <a target="_blank" href="https://vk.com/" class="social__link social__link--black social__link--mini">
+                      <svg class="social__icon social__icon--white">
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a target="_blank" href="https://telegram.org/" class="social__link social__link--black social__link--mini">
+                      <svg class="social__icon social__icon--white">
+                        <use xlink:href="img/sprite.svg#tg"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="social__item">
+                    <a target="_blank" href="https://ok.ru/" class="social__link social__link--black social__link--mini">
+                      <svg class="social__icon social__icon--white">
+                        <use xlink:href="img/sprite.svg#ok"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="contacts__item">
+              <button class="contacts__button btn-reset btn--big  btn btn--yellow">Напишите нам</button>
+            </li>
+          </ul>
+
+          <div class="map__inner">
+            <div class="map__widget map__widget--height-mobile">
+              <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/org/dvorets_gubernatorskiy/1039426078/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Дворец Губернаторский</a>
+                <a href="https://yandex.ru/maps/195/ulyanovsk/category/concert_hall/184105902/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Концертный зал в Ульяновске</a>
+                <a href="https://yandex.ru/maps/195/ulyanovsk/category/artistic_group/184105908/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Творческий коллектив в Ульяновске</a>
+                <iframe src="https://yandex.ru/map-widget/v1/org/dvorets_gubernatorskiy/1039426078/?ll=48.400594%2C54.317315&z=16.4" width="100%" height="510" frameborder="1" allowfullscreen style="position:relative;"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

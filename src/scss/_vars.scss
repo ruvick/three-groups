@@ -1,0 +1,23 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Inter-Regular", sans-serif;
+  --content-width: 1400px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --ui-bg: #e6e9ec;
+	--ui-dark: #2c2f31;
+	--ui-border-dark: rgba(13, 13, 13, 0.1);
+	--ui-white: #fff;
+	--ui-border-light: rgba(255, 255, 255, 0.1);
+	--ui-accent: #ffb21c;
+	--ui-accent-medium-contrast: rgba(255, 178, 28, 0.6);
+	--typography-black: #0d0d0d;
+	--typography-black-medium-contrast: rgba(13, 13, 13, 0.6);
+	--typography-white: #fff;
+	--typography-white-medium-contrast: rgba(255, 255, 255, 0.5);
+}

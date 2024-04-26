@@ -1,0 +1,169 @@
+.accordion-start-js {
+  transition: 0.3s;
+    cursor: pointer;
+
+  &.open svg {
+    transform: rotate(180deg);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill:  #0D0D0D;
+    transition: 0.3s;
+    transform: rotate(-45deg);
+  }
+
+}
+
+.accordion-content-js {
+  position: relative;
+  z-index: 1;
+  color: #1e1e1e;
+  //max-height: 0;
+  //opacity: 0;
+  //overflow: hidden;
+  //visibility: hidden;
+  //box-sizing: content-box;
+  //transition: max-height 0.8s ease;
+  //display: none;
+
+  &.open {
+    //max-height: inherit;
+    //opacity: 1;
+    //overflow: visible;
+    //visibility: visible;
+    //padding-top: 20px;
+    //display: block;
+  }
+}
+
+.js-text__more-button {
+  margin-top: 10px;
+  border: none;
+  transition: 0.3s;
+  background: transparent;
+  color: var(--unnamed, #E85022);
+  border-bottom: 1px solid ;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  @include min1024 {
+    &:hover{
+      border-bottom: 1px solid transparent;
+    }
+  }
+}
+
+.accordion{
+  &__text{
+    color: var(--typography-black, #0D0D0D);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    *:last-child{
+      margin-bottom: 0;
+    }
+
+    p{
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__item{
+    border-radius: 12px;
+    background: var(--ui-white, #FFF);
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__header{
+    padding: 35px 40px;
+
+    @include max600 {
+      padding: 20px;
+    }
+  }
+
+  &__body{
+    padding: 0px 40px 35px;
+
+    @include max600 {
+      padding: 20px;
+    }
+  }
+
+}
+
+.header-accordion{
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__block{
+    color: var(--typography-black, #0D0D0D);
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110.023%;
+   //  text-transform: uppercase;
+
+    @include max600 {
+      font-size: 20px;
+    }
+  }
+
+  &__arrow{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--ui-accent, #FFB21C);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.questions{
+  margin-top: 120px;
+
+  @include max600 {
+    margin-top: 80px;
+  }
+}
+
+.faq .ask{
+  position: relative;
+  &:before{
+    content: '' ;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+  }
+}
+
+
+.faq .answer{
+	overflow: hidden;
+	display: none;
+}
+
+.faq .answer.open{
+	display: flex;
+}

@@ -1,0 +1,14 @@
+.main{
+  margin-top: 30px;
+  padding-bottom: 120px;
+
+  @include max768 {
+    margin-top: 25px;
+    padding-bottom: 120px;
+  }
+
+  @include max600 {
+    margin-top: 20px;
+    padding-bottom: 80px;
+  }
+}

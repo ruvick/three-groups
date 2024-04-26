@@ -1,0 +1,7 @@
+.actions{
+  .hidden{
+    @include max400 {
+      display: none;
+    }
+  }
+}

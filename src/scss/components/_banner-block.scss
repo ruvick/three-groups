@@ -1,0 +1,145 @@
+
+.banner-block {
+  &__inner {
+    display: flex;
+    gap: 20px;
+    @media screen and (min-width: 1024px) {
+      &:hover{
+        .animate-img picture{
+          transform: scale3d(1.05, 1.05, 1.05);
+        }
+      }
+    }
+
+    @include max991 {
+      flex-direction: column-reverse;
+    }
+
+    @include max600 {
+      gap: 15px;
+    }
+  }
+
+  &__elem {
+    background: var(--ui-dark, #2C2F31);
+    min-width: 584px;
+
+    @include max1366 {
+      min-width: auto;
+    }
+  }
+
+  &__contain {
+    max-width: 584px;
+    @include max1366 {
+      max-width: 508px;
+    }
+    @include max991 {
+      max-width: 100%;
+    }
+  }
+
+  &__calendar{
+    position: absolute;
+    bottom: 34px;
+    left: 30px;
+    min-width: 305px;
+
+    @include max768 {
+      bottom: 30px;
+    }
+
+    @media screen and (max-width: 400px) {
+      bottom: 27px;
+      min-width: 285px;
+    }
+
+    @media screen and (max-width: 360px) {
+      bottom: 27px;
+      min-width: 0px;
+      left: 15px;
+    }
+
+  }
+
+  &__container {
+    padding: 50px 60px;
+    height: 100%;
+
+    @include max1366 {
+      padding: 50px;
+    }
+
+    @include max600 {
+      padding: 33px 30px;
+
+      //.buttons-banner__item{
+      //  &.item-hidden{
+      //    &:nth-child(n + 4) {
+      //      display: none;
+      //    }
+      //  }
+      //}
+    }
+  }
+
+  &__name {
+    color: var(--typography-white, #FFF);
+    font-family: Inter;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 105.023%;
+    text-transform: uppercase;
+
+    @include max991 {
+      font-size: 54px;
+    }
+
+    @include max600 {
+      font-size: 34px;
+    }
+  }
+
+  &__buttons {
+    margin: 43px 0;
+
+    @include max991 {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  &__address {
+    @include max991 {
+      display: none;
+    }
+  }
+
+  &__right {
+    position: relative;
+  }
+
+  &__images {
+    border-radius: 12px 12px 70px 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    @include max991 {
+      border-radius: 12px;
+      picture{
+        width: 100%;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+

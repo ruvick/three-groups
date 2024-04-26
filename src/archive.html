@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item">Архив</li>
+        </ul>
+      </section>
+
+      <div class="title-h2 container title-h2--bottom30">
+        <div class="title-h2__block">
+          <h2 class="title-h2__text ">Архив</h2>
+          <div class="select-block">
+          </div>
+        </div>
+      </div>
+      
+      @include('partials/calendar-year.html')
+
+      <!-- concerts-cards -->
+      <section class="concerts-cards container">
+        <div class="grid-col3 grid-col3--mb">
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile1.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive1.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive1.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Lumen</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+              </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile2.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive2.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive2.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">The Hatters</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile3.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive3.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive3.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Ария</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile4.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive4.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive4.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">стас старовойтов</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile5.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive5.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive5.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">ZIVERT</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile6.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive6.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive6.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Мельница</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile1.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive1.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive1.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Lumen</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск,</strong> Галлерея ХОЛЛ
+              </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile2.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive2.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive2.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">The Hatters</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile3.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive3.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive3.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Ария</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile4.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive4.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive4.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">стас старовойтов</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile5.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive5.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive5.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">ZIVERT</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+          <a href="#" class="card-basic grid-col3__item anime-block-hover">
+            <div class="card-basic__header animate-img">
+              <picture>
+                <source srcset="img/archive-mobile6.webp" type="image/webp" media="(max-width: 600px)" width="345" height="245">
+                <source srcset="img/archive6.webp" type="image/webp" media="(max-width: 1024px)" width="463" height="258">
+                <img loading="lazy" src="img/archive6.jpg" class="image" width="463" height="258" alt="img">
+              </picture>
+              <div class="card-basic__wrap">
+                <span class="card-basic__name">Мельница</span>
+                <span class="card-basic__descr text-orange">Концерт завершен</span>
+              </div>
+            </div>
+            <div class="card-basic__content basic-card">
+              <span class="basic-card__info"><strong>Южно-Сахалинск, </strong>Галлерея ХОЛЛ
+                </span>
+              <time datetime="2023-02-23T16:00:00" class="basic-card__date"><strong>5</strong> Июн 2022</time>
+            </div>
+          </a>
+
+        </div>
+
+        <button class="concerts-cards__button btn btn--big btn--black">Показать еще</button>
+      </section>
+      <!-- End concerts-cards -->
+
+    </main>
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item"><a href="#">Легендарное</a></li>
+          <li class="breadcrumb__item"><a href="#">2023</a></li>
+          <li class="breadcrumb__item"><a href="#">Июнь</a></li>
+          <li class="breadcrumb__item">Мельница</li>
+        </ul>
+      </section>
+      @include('partials/main-block.html')
+      @include('partials/content-block.html')
+
+      <section class="container">
+        <div class="title-h2">Фото и видео с гастролей</div>
+        @include('partials/legendary-slider.html')
+      </section>
+
+    </main>
+
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

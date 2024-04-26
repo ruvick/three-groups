@@ -1,0 +1,36 @@
+.breadcrumb {
+  margin-bottom: 40px;
+
+  @include max400 {
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--typography-black);
+
+    &:not(:last-child){
+      background: url(../img/breadcrumb-line.png) no-repeat;
+      padding-right: 16px;
+      margin-right: 8px;
+      background-position: right;
+    }
+
+    a{
+      transition: 0.3s;
+      @media screen and (min-width: 1024px) {
+        &:hover{
+          color:  var(--ui-accent);;
+        }
+      }
+    }
+  }
+}

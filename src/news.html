@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="breadcrumb container" >
+        <ul class="list-reset breadcrumb__items">
+          <li class="breadcrumb__item"><a href="/">Главная</a></li>
+          <li class="breadcrumb__item">Новости</li>
+        </ul>
+      </section>
+      <div class="title-h2 container title-h2--bottom30">
+        <div class="title-h2__block">
+          <h2 class="title-h2__text ">Новости</h2>
+          <div class="select-block">
+          </div>
+        </div>
+      </div>
+      
+      @include('partials/calendar-year.html')
+
+
+
+      <!-- concerts-cards -->
+      <section class="concerts-cards container">
+        <ul class=" grid-col3 grid-col3--mb list-reset">
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile1.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc1.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc1.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Нервы в Анапе и Сочи</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile2.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc2.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc2.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Концерты группы КняZz в Сибири</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile3.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc3.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc3.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос выступлений Натальи Красновой</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile4.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc4.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc4.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос концерта Till Lindemann</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile5.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc5.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc5.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Дополнительный спектакль «Евгений Онегин» в Томске</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile6.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc6.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc6.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос тура HYBRID THEORY</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile1.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc1.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc1.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Нервы в Анапе и Сочи</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile2.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc2.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc2.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Концерты группы КняZz в Сибири</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile3.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc3.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc3.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос выступлений Натальи Красновой</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile4.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc4.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc4.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос концерта Till Lindemann</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile5.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc5.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc5.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Дополнительный спектакль «Евгений Онегин» в Томске</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="grid-col3__item">
+            <a href="#" class="card-basic card-basic--padding anime-block-hover">
+              <div class="card-basic__header card-basic__header--big animate-img">
+                <picture>
+                  <source srcset="img/news-mobile6.webp" type="image/webp" media="(max-width: 600px)" width="345" height="288">
+                  <source srcset="img/news-pc6.webp" type="image/webp" width="463" height="314">
+                  <img loading="lazy" src="img/news-pc6.jpg" width="463" height="314" alt="news-images">
+                </picture>
+
+              </div>
+              <div class="card-basic__anime animate-content">
+                <div class="card-basic__content basic-card basic-card--flex">
+                  <span class="basic-card__info"><strong>Перенос тура HYBRID THEORY</strong></span>
+                  <time datetime="2023-02-23T16:00:00" class="basic-card__date basic-card__date--fz-modif">5 Июн 2022</time>
+                </div>
+
+                <div class="card-basic__text">
+                  <p>
+                    В августе состоятся концерты группы Нервы в Анапе и Сочи Анапа - августа, Летняя Эстрада, начало в 20:00
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <button class="concerts-cards__button btn btn--big btn--black">Показать еще</button>
+      </section>
+      <!-- End concerts-cards -->
+
+    </main>
+    @include('partials/footer.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>
