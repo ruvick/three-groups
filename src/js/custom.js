@@ -461,30 +461,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	// * videoBlock
 	//========================================================================================================================================================
 
-	document.getElementById("backToTop").onclick = function () {
-		scrollToTop();
-	};
 
-	function scrollToTop() {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth' // Плавная прокрутка
-		});
-	}
-	window.onscroll = function () {
-		scrollFunction();
-	};
 
-	function scrollFunction() {
-		var backToTopBtn = document.getElementById("backToTop");
-		if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-			backToTopBtn.style.display = "block";
-		} else {
-			backToTopBtn.style.display = "none";
-		}
-	}
+
+
 
 
 
 
 });
+

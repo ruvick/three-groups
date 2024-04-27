@@ -376,14 +376,37 @@ a:hover {
   align-self: flex-end;
 }
 
-.btn--fixed {
+.js-floating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
-  top: 30%;
-  left: 12%;
+  bottom: 5%;
+  left: 12.6%;
   z-index: 50;
-  padding: 10px 45px;
+  padding: 15px 45px;
+  min-width: 313px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.js-floating.js-active {
+  opacity: 1;
+  visibility: visible;
 }
 
+@media (max-width: 1360px) {
+  .js-floating {
+    left: 4%;
+  }
+}
+@media (max-width: 1024px) {
+  .js-floating {
+    display: none;
+  }
+}
 .location-btn__icon {
   width: 20px;
   height: 20px;
