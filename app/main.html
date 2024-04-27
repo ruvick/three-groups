@@ -23,20 +23,97 @@
 <header class="header">
     <div class="container">
         <div class="header-top">
-            <div class="header-top__inner">
+            <div class="header-top__inner inner-top-header">
+
+                <div class="header__actions actions-header">
+
+                    <div class="actions-header__item">
+                        <div class="select-block main-select main-select--header-pc main-select--header">
+                            <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
+                                <option value="Курск">Курск</option>
+                                <option value="Тольятти">Тольятти</option>
+                                <option value="Омск">Омск</option>
+                                <option value="Железногорск">Железногорск</option>
+                                <option value="Ульяновск">Ульяновск</option>
+                                <option value="Краснодар">Краснодар</option>
+                                <option value="Омск">Омск</option>
+                                <option value="Железногорск">Железногорск</option>
+                                <option value="Ульяновск">Ульяновск</option>
+                                <option value="Краснодар">Краснодар</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="actions-header__item">
+                        <div class="header-top__link header-top__link--tel contacts-header">
+                            <a href="tel:+73852533023">+7 (38-52) 53-30-23</a>
+                            <div class="contacts-header__popup popup-contacts">
+                                <div class="popup-contacts__header">
+                                    <div class="popup-contacts__title"><a href="tel:+73852533023">+7 (38-52) 53-30-23</a></div>
+                                    <!-- <button type="button" class="popup-contacts__close">✖</button> -->
+                                </div>
+                                <div class="popup-contacts__body body-popup-contacts">
+                                    <div class="body-popup-contacts__text">
+                                        Принимаем звонки ежедневно
+                                        <span>c 9:00 до 21:00 (UTC+3) МСК</span>
+                                    </div>
+                                    <a href="mailto:info@trigrupp.ru" class="body-popup-contacts__email">info@trigrupp.ru</a>
+                                    <button type="button" class="body-popup-contacts__btn btn--yellow">Написать нам</button>
+                                </div>
+                                <div class="popup-contacts__footer">
+                                    <div class="popup-contacts__messengers messengers-popup">
+                                        <a href="tel:+79646033023" class="messengers-popup__item">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#tg"></use>
+                                            </svg>
+                                            Чат в Telegram</a>
+                                        <a href="tel:+79646033023" class="messengers-popup__item">
+                                            <svg>
+                                                <use xlink:href="img/sprite.svg#tg"></use>
+                                            </svg>
+                                            Чат в Whatsap</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="header__social social">
+                    <ul class="social__inner list-reset">
+
+                        <li class="social__item">
+                            <a target="_blank" href="https://vk.com/" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="img/sprite.svg#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a target="_blank" href="https://ok.ru/" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="img/sprite.svg#ok"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                        <li class="social__item">
+                            <a target="_blank" href="https://telegram.org/" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="img/sprite.svg#tg"></use>
+                                </svg>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
                 <div class="header-top__body">
                     <ul class="header-top__list list-reset visible-links">
                         <li class="header-top__item">
-                            <a href="#" class="header-top__link">Афиша концертов</a>
-                        </li>
-                        <li class="header-top__item">
-                            <a href="#" class="header-top__link">Легендарное</a>
-                        </li>
-                        <li class="header-top__item">
                             <a href="#" class="header-top__link">Архив</a>
-                        </li>
-                        <li class="header-top__item">
-                            <a href="#" class="header-top__link">Акции на билеты</a>
                         </li>
                         <li class="header-top__item">
                             <a href="#" class="header-top__link">Новости</a>
@@ -52,45 +129,15 @@
                         </li>
                     </ul>
 
-                    <ul class='list-reset hidden-links hidden'></ul>
-                    <button class="nav-text"></button>
+                    <!-- <ul class='list-reset hidden-links hidden'></ul>
+					<button class="nav-text"></button> -->
                 </div>
 
-                <a href="#" class="header-top__button btn-reset btn btn--yellow popup-link"
-					data-target="questions-modal">Напишите нам</a>
+                <!-- <a href="#" class="header-top__button btn-reset btn btn--yellow popup-link"
+					data-target="questions-modal">Напишите нам</a> -->
 
                 <!-- <div class="header-top__link header-top__link--tel" href="tel:+73852533023"></div> -->
-                <div class="header-top__link header-top__link--tel contacts-header">
-                    <a href="tel:+73852533023">+7 (38-52) 53-30-23</a>
-                    <div class="contacts-header__popup popup-contacts">
-                        <div class="popup-contacts__header">
-                            <div class="popup-contacts__title"><a href="tel:+73852533023">+7 (38-52) 53-30-23</a></div>
-                            <!-- <button type="button" class="popup-contacts__close">✖</button> -->
-                        </div>
-                        <div class="popup-contacts__body body-popup-contacts">
-                            <div class="body-popup-contacts__text">
-                                Принимаем звонки ежедневно
-                                <span>c 9:00 до 21:00 (UTC+3) МСК</span>
-                            </div>
-                            <a href="mailto:info@trigrupp.ru" class="body-popup-contacts__email">info@trigrupp.ru</a>
-                            <button type="button" class="body-popup-contacts__btn btn--yellow">Написать нам</button>
-                        </div>
-                        <div class="popup-contacts__footer">
-                            <div class="popup-contacts__messengers messengers-popup">
-                                <a href="tel:+79646033023" class="messengers-popup__item">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#tg"></use>
-                                    </svg>
-                                    Чат в Telegram</a>
-                                <a href="tel:+79646033023" class="messengers-popup__item">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#tg"></use>
-                                    </svg>
-                                    Чат в Whatsap</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
             <div class="header-top__mobile mobile-nav">
@@ -178,6 +225,7 @@
 
         <div class="header-bottom">
             <div class="header-bottom__inner">
+
                 <a href="index.html" class="header-bottom__logo">
                     <svg class="logo">
                         <use xlink:href="img/sprite.svg#logo"></use>
@@ -191,63 +239,27 @@
           <span>Курск</span>
         </button>-->
 
-                <form class="header-bottom__form" action="#">
-                    <div class="select-block main-select main-select--header-pc main-select--header">
+                <div class="header-bottom__menu menu-navigation">
+                    <a href="" class="menu-navigation__item item-navigation">Афиша концертов</a>
+                    <a href="" class="menu-navigation__item item-navigation">Легендарное</a>
+                    <a href="" class="menu-navigation__item item-navigation item-navigation--sale">Акции</a>
+                </div>
 
-                        <select name="Пол" class="main-select__items multi-default" aria-label="Выбор города">
-                            <option value="Курск">Курск</option>
-                            <option value="Тольятти">Тольятти</option>
-                            <option value="Омск">Омск</option>
-                            <option value="Железногорск">Железногорск</option>
-                            <option value="Ульяновск">Ульяновск</option>
-                            <option value="Краснодар">Краснодар</option>
-                            <option value="Омск">Омск</option>
-                            <option value="Железногорск">Железногорск</option>
-                            <option value="Ульяновск">Ульяновск</option>
-                            <option value="Краснодар">Краснодар</option>
-                        </select>
-
-                    </div>
+                <form class="header-bottom__form search-header" action="#">
 
                     <div class="header-bottom__search search">
                         <div class="search__inner">
                             <input type="text" placeholder="Исполнитель или город" class="search__input input-reset">
-                            <button class="search__button btn-reset">
+                            <button type="submit" class="search__button btn-reset">
                                 <svg class="search__icon">
                                     <use xlink:href="img/sprite.svg#search"></use>
                                 </svg>
                             </button>
                         </div>
                     </div>
+
                 </form>
 
-                <div class="header-bottom__social social">
-                    <ul class="social__inner list-reset">
-                        <li class="social__item">
-                            <a target="_blank" href="https://vk.com/" class="social__link">
-                                <svg class="social__icon">
-                                    <use xlink:href="img/sprite.svg#vk"></use>
-                                </svg>
-                            </a>
-                        </li>
-
-                        <li class="social__item">
-                            <a target="_blank" href="https://telegram.org/" class="social__link">
-                                <svg class="social__icon">
-                                    <use xlink:href="img/sprite.svg#tg"></use>
-                                </svg>
-                            </a>
-                        </li>
-
-                        <li class="social__item">
-                            <a target="_blank" href="https://ok.ru/" class="social__link">
-                                <svg class="social__icon">
-                                    <use xlink:href="img/sprite.svg#ok"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 

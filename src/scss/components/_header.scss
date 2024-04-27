@@ -22,6 +22,10 @@
     padding: 15px 0;
     display: flex;
     align-items: center;
+
+	// new 
+	border-bottom: 1px solid #fff;
+
     @include max991 {
       display: none;
     }
@@ -118,6 +122,9 @@
     align-items: center;
     gap: 43px;
     padding: 13px 0;
+
+	//  new
+	padding: 23px 0;
 
     @include max600 {
       padding: 5px 0;
@@ -360,5 +367,109 @@
 		width: 23px;
 		height: 23px;
 		flex: 0 0 23px;
+	}
+}
+//========================================================================================================================================================
+.inner-top-header {
+	justify-content: space-between;
+	gap: 50px;
+	.header-top__body {
+		width: auto;
+		justify-content: flex-end;
+	}
+	.header-top__body .visible-links {
+		display: flex;
+		flex-wrap: wrap;
+		li {
+		padding: 0;
+		&:not(:last-child){
+			margin-right: 23px;
+		}
+  }
+}
+}
+
+
+.header__actions {
+	width: 25%;
+	// flex: 1 1 auto;
+}
+.actions-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	.header-top__link--tel {
+		font-weight: 700;
+	}
+}
+.actions-header__item {
+}
+
+.header__social {
+	.social__inner {
+		gap: 10px;
+	}
+	.social__link {
+		border-radius: 3px;
+	}
+}
+
+.header-bottom__menu {
+}
+.menu-navigation {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.menu-navigation__item {
+}
+.item-navigation {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 700;
+	padding: 6px 15px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	transition: all 0.4s ease 0s;
+}
+.item-navigation--sale {
+	padding: 7px 15px;
+	background: var(--ui-accent, #ffb21c);
+	border: 1px solid yellow;
+	transform: rotateZ(-5deg);
+}
+
+@media (any-hover: hover){
+		.item-navigation:hover {
+			background: var(--ui-accent, #ffb21c);
+			border: 1px solid yellow;
+			padding: 7px 15px;
+		}
+}
+
+.search-header {
+	.search__inner {
+		position: relative;
+	}
+	.search__input {
+		border-radius: 7px;
+		padding-left: 43px;
+	}
+	.search__button {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		padding: 12px;
+		padding-right: 8px;
+		background-color: #fff;
+		border-radius: 0px;
+		border-radius: 7px;
+	}
+	.search__icon {
+		fill: #0D0D0D1A;
 	}
 }
