@@ -211,7 +211,7 @@
   }
 
   &__block{
-    display: none;
+   //  display: none;
     background: #0D0D0D;
     position: fixed;
     z-index: 100;
@@ -219,15 +219,15 @@
     top: 0;
     bottom: 0;
     width: 70%;
-	//  transform: translateX(100%);
-	//  transition: all 0.4s ease 0s;
-	//  visibility: hidden;
+	 transform: translateX(100%);
+	 transition: all 0.4s ease 0s;
+	 visibility: hidden;
 	//  display: block;
 
     &.menu--active{
-      display: block;
-		// transform: translateX(0%);
-		// visibility: visible;
+      // display: block;
+		transform: translateX(0%);
+		visibility: visible;
     }
   }
 }

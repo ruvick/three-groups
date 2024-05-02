@@ -601,7 +601,8 @@ if (slidersContainer.length > 0) {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     // Устанавливаем body в position: fixed и top в отрицательное значение текущей позиции прокрутки
-    pageBody.style.position = 'fixed';
+    pageBody.style.overflow = 'hidden';
+    //  pageBody.style.position = 'fixed';
     pageBody.style.top = -scrollTop + 'px';
   }
   function restoreScroll() {
@@ -610,6 +611,7 @@ if (slidersContainer.length > 0) {
 
     // Восстанавливаем скролл страницы
     pageBody.style.position = '';
+    pageBody.style.overflow = 'visible';
     pageBody.style.top = '';
     window.scrollTo(0, -top);
   }

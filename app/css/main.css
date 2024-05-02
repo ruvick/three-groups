@@ -2059,7 +2059,6 @@ a:hover {
   padding: 15px 0;
 }
 .mobile-nav__block {
-  display: none;
   background: #0D0D0D;
   position: fixed;
   z-index: 100;
@@ -2067,9 +2066,18 @@ a:hover {
   top: 0;
   bottom: 0;
   width: 70%;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  visibility: hidden;
 }
 .mobile-nav__block.menu--active {
-  display: block;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  visibility: visible;
 }
 
 .logo {
