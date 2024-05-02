@@ -2307,12 +2307,13 @@ a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 23px;
 }
 .inner-top-header .header-top__body .visible-links li {
   padding: 0;
-}
-.inner-top-header .header-top__body .visible-links li:not(:last-child) {
-  margin-right: 23px;
 }
 
 .header__actions {
@@ -2329,7 +2330,6 @@ a:hover {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  gap: 20px;
 }
 .actions-header .header-top__link--tel {
   font-weight: 700;

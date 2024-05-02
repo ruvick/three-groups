@@ -395,11 +395,14 @@
 	.header-top__body .visible-links {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: flex-end;
+		gap: 23px;
 		li {
 		padding: 0;
-		&:not(:last-child){
-			margin-right: 23px;
-		}
+		// &:not(:last-child){
+			// margin-right: 23px;
+			// margin-left: 23px;
+		// }
   }
 }
 }
@@ -412,7 +415,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 20px;
+	// gap: 20px;
 	.header-top__link--tel {
 		font-weight: 700;
 	}
