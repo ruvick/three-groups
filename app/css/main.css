@@ -5344,6 +5344,11 @@ a:hover {
   -ms-transform: scaleY(1.05);
   transform: scaleY(1.05);
 }
+@media (max-width: 480px) {
+  .track__item iframe {
+    height: 100px !important;
+  }
+}
 
 .about-section__items {
   display: -webkit-box;

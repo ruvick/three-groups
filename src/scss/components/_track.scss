@@ -25,7 +25,12 @@
     border-radius: 12px;
 
     iframe{
-      transform: scaleY(1.05);
+      transform: scaleY(1.05); 
+		@media (max-width: 480px){
+			height: 100px !important;
+		}
     }
   }
 }
+
+
