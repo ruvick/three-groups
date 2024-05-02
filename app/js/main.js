@@ -377,15 +377,39 @@ function modal() {
   }
 
   //? popupClose
+  // function popupClose(popupActive, doUnlock = true) {
+  // 	if (unlock) {
+  // 		popupActive.classList.remove('open');
+  // 		if (doUnlock) {
+  // 			bodyUnLock();
+  // 		}
+  // 	}
+  // }
+
+  //? popupClose
   function popupClose(popupActive) {
     let doUnlock = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
     if (unlock) {
       popupActive.classList.remove('open');
+      popupActive.removeEventListener('click', popupCloseHandler);
       if (doUnlock) {
         bodyUnLock();
       }
     }
   }
+  function popupCloseHandler(e) {
+    if (!e.target.closest('.popup__content')) {
+      popupClose(e.target.closest('.popup'));
+    }
+  }
+  window.addEventListener('keydown', function (event) {
+    if (event.keyCode === 27) {
+      const popupActive = document.querySelector('.popup.open');
+      if (popupActive && unlock) {
+        popupClose(popupActive, true);
+      }
+    }
+  });
 
   //? bodyLock
   function bodyLock() {

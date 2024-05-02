@@ -2253,19 +2253,31 @@ a:hover {
   -ms-flex-align: center;
   align-items: center;
   gap: 3px;
-  font-size: 12px;
-}
-@media (any-hover: hover) {
-  .messengers-popup__item:hover {
-    color: var(--ui-accent, #ffb21c);
-  }
+  font-size: 10px;
 }
 .messengers-popup__item svg {
+  width: 18px;
+  height: 18px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 18px;
+  flex: 0 0 18px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.messengers-popup__item:nth-child(1) svg {
   width: 23px;
   height: 23px;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 23px;
   flex: 0 0 23px;
+}
+@media (any-hover: hover) {
+  .messengers-popup__item:hover {
+    color: var(--ui-accent, #ffb21c);
+  }
+  .messengers-popup__item:hover svg {
+    fill: var(--ui-accent, #ffb21c);
+  }
 }
 
 .inner-top-header {
@@ -5753,7 +5765,7 @@ body.lock {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 15px;
+  padding: 15px;
 }
 .popup__close {
   position: absolute;

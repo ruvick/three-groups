@@ -357,17 +357,28 @@
 	display: flex;
 	align-items: center;
 	gap: 3px;
-	font-size: 12px;
+	font-size: 10px;
+	svg {
+		width: 18px;
+		height: 18px;
+		flex: 0 0 18px;
+		transition: all 0.4s ease 0s;
+	}
+	&:nth-child(1)	{
+		svg {
+			width: 23px;
+			height: 23px;
+			flex: 0 0 23px;
+		}
+	}
 	@media (any-hover: hover){
 		&:hover { 
 		 color: var(--ui-accent, #ffb21c);
+		 svg {
+			fill: var(--ui-accent, #ffb21c);
+		 }
 	 } 
   }
-	svg {
-		width: 23px;
-		height: 23px;
-		flex: 0 0 23px;
-	}
 }
 //========================================================================================================================================================
 .inner-top-header {
