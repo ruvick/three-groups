@@ -14,24 +14,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_accordion__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_show_more_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/show-more-menu */ "./src/js/components/show-more-menu.js");
 /* harmony import */ var _components_show_more_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_show_more_menu__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
-/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
-/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_select__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_floating__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/floating */ "./src/js/components/floating.js");
-/* harmony import */ var _components_floating__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_floating__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_blockHeightOfTitle__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/blockHeightOfTitle */ "./src/js/components/blockHeightOfTitle.js");
+/* harmony import */ var _components_blockHeightOfTitle__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_blockHeightOfTitle__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_goBack__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/goBack */ "./src/js/components/goBack.js");
+/* harmony import */ var _components_goBack__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_goBack__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/select */ "./src/js/components/select.js");
+/* harmony import */ var _components_select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_select__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_text_js_mobile_hidden__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/text-js-mobile-hidden */ "./src/js/components/text-js-mobile-hidden.js");
+/* harmony import */ var _components_text_js_mobile_hidden__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_text_js_mobile_hidden__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_video_block__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/video-block */ "./src/js/components/video-block.js");
+/* harmony import */ var _components_video_block__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_video_block__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_jsCurrentYear__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/jsCurrentYear */ "./src/js/components/jsCurrentYear.js");
+/* harmony import */ var _components_jsCurrentYear__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_jsCurrentYear__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_floating__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/floating */ "./src/js/components/floating.js");
+/* harmony import */ var _components_floating__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_floating__WEBPACK_IMPORTED_MODULE_11__);
 
 
 
-//import './components/blockHeightOfTitle';
-//import './components/goBack';
 
 
-//import './components/text-js-mobile-hidden';
-//import './components/video-block';
 
-//import './components/jsCurrentYear';
+
+
+
+
+
 
 
 /***/ }),
@@ -276,6 +286,108 @@ accordion();
 
 /***/ }),
 
+/***/ "./src/js/components/blockHeightOfTitle.js":
+/*!*************************************************!*\
+  !*** ./src/js/components/blockHeightOfTitle.js ***!
+  \*************************************************/
+/***/ (() => {
+
+function hideExcessButtons() {
+  const cardContents = document.querySelectorAll(".js-cart");
+  if (cardContents.length === 0) return;
+  cardContents.forEach(content => {
+    const containerHeight = content.clientHeight - parseInt(window.getComputedStyle(content).paddingTop) - parseInt(window.getComputedStyle(content).paddingBottom) + 5;
+    const title = content.querySelector(".card-concert__title");
+    const titleHeight = title.offsetHeight + parseInt(window.getComputedStyle(title).marginBottom);
+    let excessButtons = 0;
+    const itemMoreButton = content.querySelector(".item-more");
+    const itemMoreNum = content.querySelector(".item-more__num");
+    const buttonsBanner = content.querySelector('.buttons-banner');
+    const buttons = content.querySelectorAll(".buttons-banner__item:not(.item-more)");
+    buttons.forEach(button => {
+      button.classList.remove("hidden-button");
+    });
+    itemMoreButton.classList.add("hidden-button");
+    [...buttons].reverse().forEach(button => {
+      const buttonsBannerHeight = buttonsBanner.offsetHeight;
+      if (buttonsBannerHeight > containerHeight - titleHeight) {
+        button.classList.add("hidden-button");
+        excessButtons++;
+      }
+    });
+    if (excessButtons > 0) {
+      itemMoreButton.classList.remove("hidden-button");
+      itemMoreNum.textContent = excessButtons;
+      const buttonsBannerHeight = buttonsBanner.offsetHeight;
+      if (buttonsBannerHeight > containerHeight - titleHeight) {
+        const buttons = content.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
+        buttons[buttons.length - 1].classList.add('hidden-button');
+        itemMoreNum.textContent = excessButtons + 1;
+      }
+    } else {
+      itemMoreButton.classList.add("hidden-button");
+    }
+    itemMoreButton.addEventListener("click", function () {
+      const itemMoreInner = content.querySelector(".item-more__inner");
+      itemMoreInner.classList.toggle("active");
+    });
+  });
+}
+hideExcessButtons();
+let resizeTimeout;
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(hideExcessButtons, 100);
+});
+function mainBlockHeight() {
+  const bannerBlockJs = document.querySelector('.js-block-height');
+  if (!bannerBlockJs) return;
+  const itemMoreNum = bannerBlockJs.querySelector(".link-info__date--num");
+  const itemMoreButton = bannerBlockJs.querySelector(".item-more");
+  let excessButtons = 0;
+  let size = 182;
+  if (document.documentElement.clientWidth < 991) {
+    size = 80;
+  }
+  const buttons = bannerBlockJs.querySelectorAll(".buttons-banner__item:not(.item-more)");
+  buttons.forEach(button => {
+    button.classList.remove("hidden-button");
+  });
+  itemMoreButton.classList.add("hidden-button");
+  [...buttons].reverse().forEach(button => {
+    const buttonsBannerHeight = bannerBlockJs.offsetHeight;
+    if (buttonsBannerHeight > size) {
+      button.classList.add("hidden-button");
+      excessButtons++;
+    }
+  });
+  if (excessButtons > 0) {
+    itemMoreButton.classList.remove("hidden-button");
+    itemMoreNum.textContent = excessButtons;
+    const buttonsBannerHeight = bannerBlockJs.offsetHeight;
+    if (buttonsBannerHeight > size) {
+      const buttons = bannerBlockJs.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
+      buttons[buttons.length - 1].classList.add('hidden-button');
+      itemMoreNum.textContent = excessButtons + 1;
+    }
+  } else {
+    itemMoreButton.classList.add("hidden-button");
+  }
+
+  //itemMoreButton.addEventListener("click", function () {
+  //  const itemMoreInner = bannerBlockJs.querySelector(".item-more__inner");
+  //  itemMoreInner.classList.toggle("active");
+  //});
+}
+mainBlockHeight();
+let resizeTimeoutMainBlock;
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimeoutMainBlock);
+  resizeTimeoutMainBlock = setTimeout(mainBlockHeight, 100);
+});
+
+/***/ }),
+
 /***/ "./src/js/components/burger.js":
 /*!*************************************!*\
   !*** ./src/js/components/burger.js ***!
@@ -318,6 +430,39 @@ if (document.documentElement.clientWidth >= 1024) {
   if (bannerConcert) {
     observer.observe(bannerConcert); // Начать наблюдение за элементом js-banner-concert
   }
+}
+
+/***/ }),
+
+/***/ "./src/js/components/goBack.js":
+/*!*************************************!*\
+  !*** ./src/js/components/goBack.js ***!
+  \*************************************/
+/***/ (() => {
+
+const goBack = document.querySelectorAll(".go-back");
+function goBackLink() {
+  if (goBack.length === 0) return;
+  goBack.forEach(function (button) {
+    button.addEventListener("click", function () {
+      window.history.back();
+    });
+  });
+}
+goBackLink();
+
+/***/ }),
+
+/***/ "./src/js/components/jsCurrentYear.js":
+/*!********************************************!*\
+  !*** ./src/js/components/jsCurrentYear.js ***!
+  \********************************************/
+/***/ (() => {
+
+const jsCurrentYear = document.querySelector('.js-currentYear');
+if (jsCurrentYear) {
+  const currentYear = new Date().getFullYear();
+  jsCurrentYear.textContent = currentYear;
 }
 
 /***/ }),
@@ -579,6 +724,51 @@ if (slidersContainer.length > 0) {
       });
     }
   });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/text-js-mobile-hidden.js":
+/*!****************************************************!*\
+  !*** ./src/js/components/text-js-mobile-hidden.js ***!
+  \****************************************************/
+/***/ (() => {
+
+const textJs = document.querySelector('.text-js-mobile-hidden');
+function textJsMobileHidden() {
+  if (!textJs) return;
+  const jsBlock = document.querySelector('.js-block');
+  const jsButton = document.querySelector('.js-button');
+  jsButton.addEventListener('click', function () {
+    jsBlock.classList.add('active');
+    jsButton.style.display = 'none';
+  });
+}
+textJsMobileHidden();
+
+/***/ }),
+
+/***/ "./src/js/components/video-block.js":
+/*!******************************************!*\
+  !*** ./src/js/components/video-block.js ***!
+  \******************************************/
+/***/ (() => {
+
+const videoBlock = document.querySelector('.video-block');
+if (videoBlock) {
+  const video = videoBlock.querySelector('video');
+  const playBtn = videoBlock.querySelector('.video-block__play');
+  playBtn.addEventListener('click', () => {
+    videoBlock.classList.add('video-block--played');
+    video.play();
+    video.controls = true;
+    playBtn.classList.add('video-block__play--played');
+  });
+  video.onpause = function () {
+    videoBlock.classList.remove('video-block--played');
+    video.controls = false;
+    playBtn.classList.remove('video-block__play--played');
+  };
 }
 
 /***/ }),
