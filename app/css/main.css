@@ -5902,7 +5902,7 @@ body.lock {
 .form-label {
   position: absolute;
   color: #acacac;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
