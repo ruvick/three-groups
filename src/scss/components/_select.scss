@@ -99,6 +99,10 @@
     padding: 20px 10px 20px 15px;
     background-color: #fff;
     top: calc(100% + 5px);
+	//  top: 100%;
+	//  height: 100%;
+	top: auto;
+	bottom: auto;
   }
 
   .choices__item {

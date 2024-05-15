@@ -150,9 +150,13 @@
 		}
 	}
 
-	@media (max-width: 1024px){
+	@media (max-width: 480px){
 		.js-floating {
-			display: none;
+			// display: none;
+			width: 95%;
+			min-width: auto;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 
@@ -1187,6 +1191,7 @@
 		 max-width: 100%;
 		 width: 100%;
 		 height: 100%;
+		 z-index: -1;
 	 }
 	 video {
 		@include max400 {
@@ -1195,6 +1200,7 @@
 		 max-width: 100%;
 		 width: 100%;
 		 height: 100%;
+		 object-fit: cover;
 		 p {
 			padding: 10px;
 		 }

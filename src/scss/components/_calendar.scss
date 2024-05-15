@@ -39,6 +39,10 @@
     transition: 0.3s;
     border-radius: 37px;
     padding: 4px 10px;
+	 &:active {
+		transition: all 0.2s ease 0s;
+		background: var(--ui-accent, #FFB21C);
+	}
     span{
       color: var(--typography-black-medium-contrast);
       margin-left: 5px;
@@ -57,6 +61,14 @@
     }
   }
 }
+
+
+
+.calendar__items::-webkit-scrollbar,
+.calendar__items::-webkit-scrollbar-thumb {
+	display: none;
+}
+
 .calendar--mb {
   margin-bottom: 60px;
 

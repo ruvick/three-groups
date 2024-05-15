@@ -402,9 +402,14 @@ a:hover {
     left: 4%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
   .js-floating {
-    display: none;
+    width: 95%;
+    min-width: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 .location-btn__icon {
@@ -1566,6 +1571,7 @@ a:hover {
   max-width: 100%;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 @media (max-width: 500px) {
   .slider__img iframe {
@@ -1576,6 +1582,8 @@ a:hover {
   max-width: 100%;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 500px) {
   .slider__img video {
@@ -4680,6 +4688,8 @@ a:hover {
   padding: 20px 10px 20px 15px;
   background-color: #fff;
   top: calc(100% + 5px);
+  top: auto;
+  bottom: auto;
 }
 .main-select .choices__item {
   font-weight: 400;
@@ -4979,6 +4989,11 @@ a:hover {
   border-radius: 37px;
   padding: 4px 10px;
 }
+.calendar__link:active {
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+  background: var(--ui-accent, #FFB21C);
+}
 .calendar__link span {
   color: var(--typography-black-medium-contrast);
   margin-left: 5px;
@@ -4992,6 +5007,11 @@ a:hover {
   .calendar__link {
     font-size: 14px;
   }
+}
+
+.calendar__items::-webkit-scrollbar,
+.calendar__items::-webkit-scrollbar-thumb {
+  display: none;
 }
 
 .calendar--mb {
