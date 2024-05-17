@@ -1312,6 +1312,16 @@
   position: relative;
 }
 
-
-
+.btn--yellow:active {
+	background: var(--ui-dark, #2c2f31);
+   //  color: #ffffff;
+	background-color: #fff;
+}
+.btn--yellow:active span {
+   //  color: #ffffff;
+}
+.btn--white:active {
+	color: #ffffff;
+	background: var(--ui-accent, #ffb21c);
+}
 
