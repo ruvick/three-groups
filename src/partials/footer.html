@@ -35,7 +35,9 @@
 				</ul>
 			</div>
 
-			<button class="footer-top__button btn btn-reset btn--border-transparent">Напишите нам</button>
+			<button data-target="questions-modal"
+				class="footer-top__button btn btn-reset btn--border-transparent popup-link">Напишите нам
+			</button>
 		</div>
 
 		<div class="footer-menu faq">
@@ -158,53 +160,55 @@
 	<div class="popup__body">
 		<div class="popup__content questioner-form__content">
 			<a href="#" class="popup__close close-popup">&#10006;</a>
+
 			<form action="#" class="form main-form">
 				<div class="title-h3">Задать вопрос</div>
 				<span class="main-form__subtite">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время</span>
+
 				<div class="input-map__address main-form main-form__row">
 					<div class="form-item main-form__field">
 						<input class="inputMain form-input" type="name" name="name" placeholder=" ">
 						<label class="form-label">Ваше имя</label>
 					</div>
 					<div class="form-item main-form__field">
-						<input class="inputMain" type="mail" name="mail" placeholder=" ">
+						<input class="inputMain" type="mail" name="email" placeholder=" ">
 						<label class="form-label">Email <span class="main-form__label">*</span></label>
 						<small class="main-form__error"></small>
 					</div>
 					<div class="form-item main-form__field">
-						<input class="inputMain" id="my-input" type="tel" inputmode="tel" name="ST_REGISTER_AUTH_PHONE"
-							autocomplete="off" placeholder=" ">
+						<input class="inputMain" id="my-input" type="tel" inputmode="tel" name="phone" autocomplete="off"
+							placeholder=" ">
 						<label class="form-label">Телефон <span class="main-form__label">*</span></label>
 						<small class="main-form__error"></small>
 					</div>
-					<div class="main-select main-select--popup">
-						<select name="Пол" class="main-select__items  multi-default--big multi-default"
+					<div class="main-select main-select--popup select-container">
+						<select id="customSelect" name="Пол" class="main-select__items multi-default--big multi-defaults"
 							aria-label="По какому мероприятию вопрос*">
-							<option value="">По какому мероприятию вопрос </option>
+							<option value="" disabled selected class="hidden-option">По какому мероприятию вопрос</option>
 							<option value="Мероприятие 1">Мероприятие 1</option>
 							<option value="Мероприятие 2">Мероприятие 2</option>
 							<option value="Мероприятие 3">Мероприятие 3</option>
 							<option value="Мероприятие 4">Мероприятие 4</option>
 							<option value="Мероприятие 5">Мероприятие 5</option>
 							<option value="Мероприятие 6">Мероприятие 6</option>
-							<option value="Мероприятие 3">Мероприятие 3</option>
-							<option value="Мероприятие 4">Мероприятие 4</option>
-							<option value="Мероприятие 5">Мероприятие 5</option>
-							<option value="Мероприятие 6">Мероприятие 6</option>
+							<option value="other">Другой вариант</option>
 						</select>
+						<input type="text" id="customInput" placeholder="Введите свой вариант" style="display:none;" />
 					</div>
 					<div class="form-item main-form__field">
-						<textarea class="inputMain form-label__comment" type="comment" name="comment"
-							placeholder=" "></textarea>
+						<textarea class="inputMain form-label__comment" type="text" name="comment" placeholder=" "></textarea>
 						<label class="form-label">Вопрос <span class="main-form__label">*</span></label>
 						<small class="main-form__error"></small>
 					</div>
 
-					<span class="main-form__info">Нажимая на кнопку, Вы соглашаетесь на обработку персональных данных</span>
+					<span class="main-form__info">Нажимая на кнопку, Вы соглашаетесь на обработку персональных
+						данных</span>
 
 					<button type="submit" class="main-form__button btn-reset btn btn--yellow">Отправить</button>
 				</div>
+
 			</form>
+
 		</div>
 	</div>
 </section>

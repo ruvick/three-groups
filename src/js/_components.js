@@ -10,5 +10,6 @@ import './components/video-block';
 import './components/modal';
 import './components/jsCurrentYear';
 import './components/floating';
+import './components/validation';
 
 

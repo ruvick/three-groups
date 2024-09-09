@@ -397,4 +397,16 @@
     display: block;
   }
 }
+
+.main-select--popup .choices__list--dropdown {
+	border-radius: 0 0 19px 19px !important;
+ }
+ .main-select--popup .choices__list--dropdown {
+	margin-top: -5px;
+}
+
+.choices__item--disabled,
+.hidden-option {
+	display: none; /* Скрываем заголовок */
+}
 /*End main-select*/

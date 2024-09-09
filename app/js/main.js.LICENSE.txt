@@ -1,3 +1,0 @@
-/*! For license information please see choices.min.js.LICENSE.txt */
-
-//! modal

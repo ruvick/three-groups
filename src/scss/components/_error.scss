@@ -159,3 +159,13 @@
 .hidden-button{
   display:none;
 }
+
+.just-validate-error-label {
+	font-size: 12px;
+	margin-top: 6px;
+	padding-left: 10px;
+}
+.inputMain.just-validate-error-field {
+	border: 1px solid red;
+}
+
