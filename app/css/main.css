@@ -2512,6 +2512,49 @@ a:hover {
   border-radius: 12px;
 }
 
+.menu-search .cards-action__inner {
+  padding: 5px 0;
+}
+
+.menu-search .cards-action__link--height {
+  height: auto;
+  min-height: 0;
+}
+
+.menu-search .cards-action__content {
+  padding: 5px 20px;
+}
+
+.menu-search .cards-action__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+}
+
+.menu-search .cards-action__info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+}
+
+.menu-search .cards-action__images {
+  overflow: hidden;
+  min-width: 100px;
+  height: inherit;
+  position: relative;
+  padding-bottom: 8%;
+}
+
+.menu-search .cards-action__images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-search .cards-action__item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 .menu-search__cards-action {
   max-height: 272px;
   overflow: auto;
@@ -2519,41 +2562,6 @@ a:hover {
   padding-right: 10px;
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
-}
-.menu-search__cards-action .cards-action__inner {
-  padding: 5px 0;
-}
-.menu-search__cards-action .cards-action__link--height {
-  height: auto;
-  min-height: 0;
-}
-.menu-search__cards-action .cards-action__content {
-  padding: 5px 20px;
-}
-.menu-search__cards-action .cards-action__name {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20.8px;
-}
-.menu-search__cards-action .cards-action__info {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.94px;
-}
-.menu-search__cards-action .cards-action__images {
-  overflow: hidden;
-  min-width: 100px;
-  height: inherit;
-  position: relative;
-  padding-bottom: 8.8%;
-}
-.menu-search__cards-action .cards-action__images img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.menu-search__cards-action .cards-action__item:not(:last-child) {
-  margin-bottom: 5px;
 }
 
 .menu-search__cards-action::-webkit-scrollbar {
@@ -2568,6 +2576,11 @@ a:hover {
   border-radius: 50px;
 }
 
+@media (max-width: 768px) {
+  .menu-search .cards-action__content {
+    gap: 5px;
+  }
+}
 .header-top__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4302,8 +4315,18 @@ a:hover {
   padding-left: 10px;
 }
 
+.choices__inner.just-validate-error-field,
 .inputMain.just-validate-error-field {
-  border: 1px solid red;
+  border: 1px solid red !important;
+}
+
+.choices {
+  overflow: visible !important;
+}
+
+.choices .just-validate-error-label {
+  position: absolute;
+  left: 5px;
 }
 
 .social-section__overflow {

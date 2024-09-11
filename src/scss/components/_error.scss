@@ -165,7 +165,17 @@
 	margin-top: 6px;
 	padding-left: 10px;
 }
+
+.choices__inner.just-validate-error-field,
 .inputMain.just-validate-error-field {
-	border: 1px solid red;
+	border: 1px solid red !important;
 }
 
+.choices {
+	overflow: visible !important;
+}
+
+.choices .just-validate-error-label {
+	position: absolute;
+	left: 5px;
+}

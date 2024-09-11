@@ -880,6 +880,14 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let item of rules) {
       validation.addField(item.ruleSelector, item.rules);
     }
+
+    // Обработка ошибок для селекта
+    validation.onFail(errors => {
+      const choicesInner = form.querySelector('.choices__inner'); // Ищем внутри текущей формы
+      if (choicesInner) {
+        choicesInner.classList.add('just-validate-error-field');
+      }
+    });
     validation.onSuccess(ev => {
       let formData = new FormData(ev.target);
       let xhr = new XMLHttpRequest();
@@ -896,7 +904,24 @@ document.addEventListener('DOMContentLoaded', () => {
       xhr.open('POST', 'mail.php', true);
       xhr.send(formData);
       ev.target.reset();
+
+      // Удаляем класс ошибки после успешной отправки формы
+      const choicesInner = form.querySelector('.choices__inner');
+      if (choicesInner) {
+        choicesInner.classList.remove('just-validate-error-field');
+      }
     });
+
+    // Добавляем обработчик события change для селекта
+    const selectElement = form.querySelector('#customSelect');
+    if (selectElement) {
+      selectElement.addEventListener('change', () => {
+        const choicesInner = form.querySelector('.choices__inner');
+        if (choicesInner) {
+          choicesInner.classList.remove('just-validate-error-field');
+        }
+      });
+    }
   };
   validateForms('.main-form', [{
     ruleSelector: 'input[name="name"]',
@@ -929,14 +954,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return phone.length === 10;
       },
       errorMessage: 'Введите корректный телефон'
-    }],
-    tel: true,
-    telError: 'Введите корректный телефон'
+    }]
   }, {
     ruleSelector: 'textarea[name="comment"]',
     rules: [{
       rule: 'required',
       errorMessage: 'Заполните поле'
+    }]
+  },
+  // Валидация для селекта
+  {
+    ruleSelector: '#customSelect',
+    rules: [{
+      rule: 'required',
+      errorMessage: 'Пожалуйста, выберите мероприятие'
     }]
   }], () => {
     alert('Форма успешно отправлена!');
