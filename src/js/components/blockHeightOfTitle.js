@@ -16,6 +16,7 @@ function hideExcessButtons() {
       button.classList.remove("hidden-button");
     })
 
+		if (itemMoreButton)
     itemMoreButton.classList.add("hidden-button");
     [...buttons].reverse().forEach((button) => {
       const buttonsBannerHeight = buttonsBanner.offsetHeight;
@@ -27,6 +28,8 @@ function hideExcessButtons() {
     });
 
     if (excessButtons > 0) {
+			
+			if (itemMoreButton)
       itemMoreButton.classList.remove("hidden-button");
       itemMoreNum.textContent = excessButtons;
       const buttonsBannerHeight = buttonsBanner.offsetHeight;
@@ -38,6 +41,7 @@ function hideExcessButtons() {
       }
 
     } else {
+			if (itemMoreButton)
       itemMoreButton.classList.add("hidden-button");
     }
 
@@ -73,6 +77,7 @@ function mainBlockHeight() {
     button.classList.remove("hidden-button");
   })
 
+	if(itemMoreButton)
   itemMoreButton.classList.add("hidden-button");
   [...buttons].reverse().forEach((button) => {
     const buttonsBannerHeight = bannerBlockJs.offsetHeight;
@@ -85,6 +90,7 @@ function mainBlockHeight() {
 
 
   if (excessButtons > 0) {
+		if (itemMoreButton)
     itemMoreButton.classList.remove("hidden-button");
     itemMoreNum.textContent = excessButtons;
     const buttonsBannerHeight = bannerBlockJs.offsetHeight;
@@ -96,6 +102,7 @@ function mainBlockHeight() {
     }
 
   } else {
+		if (itemMoreButton)
     itemMoreButton.classList.add("hidden-button");
   }
 

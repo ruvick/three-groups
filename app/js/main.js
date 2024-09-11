@@ -312,7 +312,7 @@ function hideExcessButtons() {
     buttons.forEach(button => {
       button.classList.remove("hidden-button");
     });
-    itemMoreButton.classList.add("hidden-button");
+    if (itemMoreButton) itemMoreButton.classList.add("hidden-button");
     [...buttons].reverse().forEach(button => {
       const buttonsBannerHeight = buttonsBanner.offsetHeight;
       if (buttonsBannerHeight > containerHeight - titleHeight) {
@@ -321,7 +321,7 @@ function hideExcessButtons() {
       }
     });
     if (excessButtons > 0) {
-      itemMoreButton.classList.remove("hidden-button");
+      if (itemMoreButton) itemMoreButton.classList.remove("hidden-button");
       itemMoreNum.textContent = excessButtons;
       const buttonsBannerHeight = buttonsBanner.offsetHeight;
       if (buttonsBannerHeight > containerHeight - titleHeight) {
@@ -330,7 +330,7 @@ function hideExcessButtons() {
         itemMoreNum.textContent = excessButtons + 1;
       }
     } else {
-      itemMoreButton.classList.add("hidden-button");
+      if (itemMoreButton) itemMoreButton.classList.add("hidden-button");
     }
     itemMoreButton.addEventListener("click", function () {
       const itemMoreInner = content.querySelector(".item-more__inner");
@@ -358,7 +358,7 @@ function mainBlockHeight() {
   buttons.forEach(button => {
     button.classList.remove("hidden-button");
   });
-  itemMoreButton.classList.add("hidden-button");
+  if (itemMoreButton) itemMoreButton.classList.add("hidden-button");
   [...buttons].reverse().forEach(button => {
     const buttonsBannerHeight = bannerBlockJs.offsetHeight;
     if (buttonsBannerHeight > size) {
@@ -367,7 +367,7 @@ function mainBlockHeight() {
     }
   });
   if (excessButtons > 0) {
-    itemMoreButton.classList.remove("hidden-button");
+    if (itemMoreButton) itemMoreButton.classList.remove("hidden-button");
     itemMoreNum.textContent = excessButtons;
     const buttonsBannerHeight = bannerBlockJs.offsetHeight;
     if (buttonsBannerHeight > size) {
@@ -376,7 +376,7 @@ function mainBlockHeight() {
       itemMoreNum.textContent = excessButtons + 1;
     }
   } else {
-    itemMoreButton.classList.add("hidden-button");
+    if (itemMoreButton) itemMoreButton.classList.add("hidden-button");
   }
 
   //itemMoreButton.addEventListener("click", function () {
@@ -23906,4 +23906,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
