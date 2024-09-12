@@ -6,6 +6,10 @@
   }
 }
 
+.actions .btn--show {
+	min-width: 150px;
+}
+
 @media (max-width: 991px){
 	.actions .btn--show {
 		display: none;
