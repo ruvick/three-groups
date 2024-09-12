@@ -3875,6 +3875,11 @@ a:hover {
   }
 }
 
+@media (max-width: 991px) {
+  .actions .btn--show {
+    display: none;
+  }
+}
 .cards-action--mb60 {
   margin-bottom: 60px;
 }

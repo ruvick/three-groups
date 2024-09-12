@@ -5,3 +5,9 @@
     }
   }
 }
+
+@media (max-width: 991px){
+	.actions .btn--show {
+		display: none;
+	}
+}

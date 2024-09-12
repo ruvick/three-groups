@@ -1,7 +1,6 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-// document.addEventListener('DOMContentLoaded', () => {
     const telInput = document.querySelector('input[type="tel"]');
 
     if (telInput) {
@@ -144,4 +143,3 @@ import Inputmask from "inputmask";
     ], () => {
         alert('Форма успешно отправлена!');
     });
-// });

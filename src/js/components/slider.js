@@ -11,12 +11,13 @@ if (slidersContainer.length > 0) {
 	slidersContainer.forEach((container) => {
 		const slider = container.querySelector(".slider");
 		const nextButton = container.querySelector(".swiper-button-next");
-		const prevButton = container.querySelector(".swiper-button-prev");
+		const prevButton = container.querySelector(".swiper-button-prev"); 
 
 		if (slider && nextButton && prevButton) {
 			let swiper = new Swiper(slider, {
 				slidesPerView: 1.4,
 				spaceBetween: 20,
+				loop: true,
 				navigation: {
 					nextEl: nextButton,
 					prevEl: prevButton,
