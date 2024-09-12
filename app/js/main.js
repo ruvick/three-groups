@@ -303,11 +303,13 @@ function hideExcessButtons() {
   cardContents.forEach(content => {
     const containerHeight = content.clientHeight - parseInt(window.getComputedStyle(content).paddingTop) - parseInt(window.getComputedStyle(content).paddingBottom) + 5;
     const title = content.querySelector(".card-concert__title");
+    if (!title) return;
     const titleHeight = title.offsetHeight + parseInt(window.getComputedStyle(title).marginBottom);
     let excessButtons = 0;
     const itemMoreButton = content.querySelector(".item-more");
     const itemMoreNum = content.querySelector(".item-more__num");
     const buttonsBanner = content.querySelector('.buttons-banner');
+    if (!buttonsBanner) return;
     const buttons = content.querySelectorAll(".buttons-banner__item:not(.item-more)");
     buttons.forEach(button => {
       button.classList.remove("hidden-button");
@@ -322,20 +324,24 @@ function hideExcessButtons() {
     });
     if (excessButtons > 0) {
       if (itemMoreButton) itemMoreButton.classList.remove("hidden-button");
-      itemMoreNum.textContent = excessButtons;
+      if (itemMoreNum) itemMoreNum.textContent = excessButtons;
       const buttonsBannerHeight = buttonsBanner.offsetHeight;
       if (buttonsBannerHeight > containerHeight - titleHeight) {
-        const buttons = content.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
-        buttons[buttons.length - 1].classList.add('hidden-button');
-        itemMoreNum.textContent = excessButtons + 1;
+        const visibleButtons = content.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
+        if (visibleButtons.length > 0) {
+          visibleButtons[visibleButtons.length - 1].classList.add('hidden-button');
+          if (itemMoreNum) itemMoreNum.textContent = excessButtons + 1;
+        }
       }
     } else {
       if (itemMoreButton) itemMoreButton.classList.add("hidden-button");
     }
-    itemMoreButton.addEventListener("click", function () {
-      const itemMoreInner = content.querySelector(".item-more__inner");
-      itemMoreInner.classList.toggle("active");
-    });
+    if (itemMoreButton) {
+      itemMoreButton.addEventListener("click", function () {
+        const itemMoreInner = content.querySelector(".item-more__inner");
+        if (itemMoreInner) itemMoreInner.classList.toggle("active");
+      });
+    }
   });
 }
 hideExcessButtons();
@@ -368,21 +374,26 @@ function mainBlockHeight() {
   });
   if (excessButtons > 0) {
     if (itemMoreButton) itemMoreButton.classList.remove("hidden-button");
-    itemMoreNum.textContent = excessButtons;
+    if (itemMoreNum) itemMoreNum.textContent = excessButtons;
     const buttonsBannerHeight = bannerBlockJs.offsetHeight;
     if (buttonsBannerHeight > size) {
-      const buttons = bannerBlockJs.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
-      buttons[buttons.length - 1].classList.add('hidden-button');
-      itemMoreNum.textContent = excessButtons + 1;
+      const visibleButtons = bannerBlockJs.querySelectorAll(".buttons-banner__item:not(.item-more,.hidden-button)");
+      if (visibleButtons.length > 0) {
+        visibleButtons[visibleButtons.length - 1].classList.add('hidden-button');
+        if (itemMoreNum) itemMoreNum.textContent = excessButtons + 1;
+      }
     }
   } else {
     if (itemMoreButton) itemMoreButton.classList.add("hidden-button");
   }
 
-  //itemMoreButton.addEventListener("click", function () {
-  //  const itemMoreInner = bannerBlockJs.querySelector(".item-more__inner");
-  //  itemMoreInner.classList.toggle("active");
-  //});
+  // Uncomment and add condition if needed
+  // if (itemMoreButton) {
+  // itemMoreButton.addEventListener("click", function () {
+  //     const itemMoreInner = bannerBlockJs.querySelector(".item-more__inner");
+  //     if (itemMoreInner) itemMoreInner.classList.toggle("active");
+  // });
+  // }
 }
 mainBlockHeight();
 let resizeTimeoutMainBlock;
@@ -610,9 +621,11 @@ const multiDefault = () => {
   const elements = document.querySelectorAll('.multi-default');
   if (elements.length > 0) {
     elements.forEach(el => {
-      const choices = new Choices(el, {
-        searchEnabled: false
-      });
+      if (el) {
+        const choices = new Choices(el, {
+          searchEnabled: false
+        });
+      }
     });
   }
 };
@@ -622,7 +635,7 @@ const multiDefaults = () => {
   if (elements.length > 0) {
     elements.forEach(el => {
       // Проверяем, есть ли уже Choices на этом элементе
-      if (!el.choices) {
+      if (el && !el.choices) {
         const choices = new Choices(el, {
           searchEnabled: false,
           allowHTML: true
@@ -678,38 +691,40 @@ const multiDefaults = () => {
 multiDefaults();
 const select = document.getElementById('customSelect');
 const customInput = document.getElementById('customInput');
-let choicesInstance = new Choices(select); // Создаем экземпляр Choices для select
+if (select) {
+  let choicesInstance = new Choices(select); // Создаем экземпляр Choices для select
 
-// Обработчик события blur для текстового поля
-if (customInput) {
-  customInput.addEventListener('blur', function () {
-    const customValue = customInput.value.trim();
-    if (customValue) {
-      // Проверяем, есть ли уже такая опция
-      const existingOption = Array.from(select.options).some(option => option.value === customValue);
-      if (!existingOption) {
-        const newOption = document.createElement('option');
-        newOption.value = customValue;
-        newOption.textContent = customValue;
-        newOption.selected = true;
-        select.appendChild(newOption);
+  // Обработчик события blur для текстового поля
+  if (customInput) {
+    customInput.addEventListener('blur', function () {
+      const customValue = customInput.value.trim();
+      if (customValue) {
+        // Проверяем, есть ли уже такая опция
+        const existingOption = Array.from(select.options).some(option => option.value === customValue);
+        if (!existingOption) {
+          const newOption = document.createElement('option');
+          newOption.value = customValue;
+          newOption.textContent = customValue;
+          newOption.selected = true;
+          select.appendChild(newOption);
 
-        // Обновляем Choices после добавления новой опции
-        choicesInstance.setChoices(Array.from(select.options).map(option => ({
-          value: option.value,
-          label: option.textContent,
-          selected: option.selected,
-          disabled: option.disabled
-        })), 'value', 'label', false // Устанавливаем false для обновления Choices без перезагрузки
-        );
+          // Обновляем Choices после добавления новой опции
+          choicesInstance.setChoices(Array.from(select.options).map(option => ({
+            value: option.value,
+            label: option.textContent,
+            selected: option.selected,
+            disabled: option.disabled
+          })), 'value', 'label', false // Устанавливаем false для обновления Choices без перезагрузки
+          );
 
-        // Устанавливаем новый вариант как выбранный
-        choicesInstance.setChoiceByValue(customValue);
+          // Устанавливаем новый вариант как выбранный
+          choicesInstance.setChoiceByValue(customValue);
+        }
+        customInput.value = ''; // Очищаем поле ввода
+        customInput.style.display = 'none'; // Скрываем поле ввода после добавления
       }
-      customInput.value = ''; // Очищаем поле ввода
-      customInput.style.display = 'none'; // Скрываем поле ввода после добавления
-    }
-  });
+    });
+  }
 }
 
 /***/ }),
@@ -860,25 +875,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var inputmask__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(inputmask__WEBPACK_IMPORTED_MODULE_1__);
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const telInput = document.querySelector('input[type="tel"]');
-  if (telInput) {
-    const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())('+7 (999) 999-99-99');
-    inputMask.mask(telInput);
-  }
-  const validateForms = (selector, rules, afterSend) => {
-    const form = document?.querySelector(selector);
-    if (!form) {
-      console.error('Нет такого селектора!');
-      return false;
-    }
-    if (!rules) {
-      console.error('Вы не передали правила валидации!');
-      return false;
-    }
-    const validation = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](selector);
+
+// document.addEventListener('DOMContentLoaded', () => {
+const telInput = document.querySelector('input[type="tel"]');
+if (telInput) {
+  const inputMask = new (inputmask__WEBPACK_IMPORTED_MODULE_1___default())('+7 (999) 999-99-99');
+  inputMask.mask(telInput);
+}
+const validateForms = (rules, afterSend) => {
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    const validation = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](form);
     for (let item of rules) {
-      validation.addField(item.ruleSelector, item.rules);
+      const fieldElement = form.querySelector(item.ruleSelector);
+      if (fieldElement) {
+        validation.addField(item.ruleSelector, item.rules);
+      } else {
+        // console.error(`Поле с селектором ${item.ruleSelector} не существует в DOM!`);
+      }
     }
 
     // Обработка ошибок для селекта
@@ -922,57 +936,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
-  };
-  validateForms('.main-form', [{
-    ruleSelector: 'input[name="name"]',
-    rules: [{
-      rule: 'required',
-      errorMessage: 'Заполните поле'
-    }, {
-      rule: 'minLength',
-      value: 3,
-      errorMessage: 'Минимальная длина 3 символа'
-    }]
-  }, {
-    ruleSelector: 'input[name="email"]',
-    rules: [{
-      rule: 'required',
-      errorMessage: 'Заполните поле'
-    }, {
-      rule: 'email',
-      errorMessage: 'Введите корректный email'
-    }]
-  }, {
-    ruleSelector: 'input[name="phone"]',
-    rules: [{
-      rule: 'required',
-      errorMessage: 'Заполните поле'
-    }, {
-      rule: 'function',
-      validator: function () {
-        const phone = document.querySelector('input[name="phone"]').inputmask.unmaskedvalue();
-        return phone.length === 10;
-      },
-      errorMessage: 'Введите корректный телефон'
-    }]
-  }, {
-    ruleSelector: 'textarea[name="comment"]',
-    rules: [{
-      rule: 'required',
-      errorMessage: 'Заполните поле'
-    }]
-  },
-  // Валидация для селекта
-  {
-    ruleSelector: '#customSelect',
-    rules: [{
-      rule: 'required',
-      errorMessage: 'Пожалуйста, выберите мероприятие'
-    }]
-  }], () => {
-    alert('Форма успешно отправлена!');
   });
+};
+validateForms([{
+  ruleSelector: 'input[type="name"]',
+  rules: [{
+    rule: 'required',
+    errorMessage: 'Заполните поле'
+  }, {
+    rule: 'minLength',
+    value: 3,
+    errorMessage: 'Минимальная длина 3 символа'
+  }]
+}, {
+  ruleSelector: 'input[type="email"]',
+  rules: [{
+    rule: 'required',
+    errorMessage: 'Заполните поле'
+  }, {
+    rule: 'email',
+    errorMessage: 'Введите корректный email'
+  }]
+}, {
+  ruleSelector: 'input[type="tel"]',
+  rules: [{
+    rule: 'required',
+    errorMessage: 'Заполните поле'
+  }, {
+    rule: 'function',
+    validator: function () {
+      const phoneInput = document.querySelector('input[type="tel"]');
+      if (phoneInput && phoneInput.inputmask) {
+        const phone = phoneInput.inputmask.unmaskedvalue();
+        return phone.length === 10;
+      }
+      return false;
+    },
+    errorMessage: 'Введите корректный телефон'
+  }]
+}, {
+  ruleSelector: 'textarea[type="text"]',
+  rules: [{
+    rule: 'required',
+    errorMessage: 'Заполните поле'
+  }]
+},
+// Валидация для селекта
+{
+  ruleSelector: '#customSelect',
+  rules: [{
+    rule: 'required',
+    errorMessage: 'Пожалуйста, выберите мероприятие'
+  }]
+}], () => {
+  alert('Форма успешно отправлена!');
 });
+// });
 
 /***/ }),
 
